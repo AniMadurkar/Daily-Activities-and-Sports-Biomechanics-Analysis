@@ -30,10 +30,10 @@ def main():
         """
         
         try:
-            sports_science = pd.read_csv(filename)
+            sports_science = pd.read_csv(f"{filename}.csv")
         except:
-            sports_science = pd.read_csv(f"{filename}_subset")
-                    
+            sports_science = pd.read_csv(f"{filename}_subset.csv")
+
         return sports_science
 
     @st.cache()
@@ -162,7 +162,7 @@ def main():
         st.subheader(f"Boxplot Analysis of {filtered_sensor_label} Across Multiple Activities")
         st.pyplot(fig)
 
-    data = load_data("sports_science_dataset.csv")
+    data = load_data("sports_science_dataset")
 
     xyz = ["X", "Y", "Z"]
     motion = ["Acc", "Gyro", "Mag"]
