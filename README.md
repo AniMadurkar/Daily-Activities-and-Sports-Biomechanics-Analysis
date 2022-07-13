@@ -60,3 +60,10 @@ streamlit run streamlit_app.py
 ```
 
 ## Coming Soon...
+
+Unsupervised Learning
+- Clustering accelerometer, gyrometer, and magnometer data to identify activities in high dimensional spaces
+- Dimensionality reduction to investigate loading vectors
+
+Supervised Learning
+- Classification of activity/sport based on sensor readings
