@@ -63,17 +63,18 @@ streamlit run streamlit_app.py
 ```
 
 ## Coming Soon...
-Some intial ideas of what I'm hoping to build out in future versions. Ideas welcome!
+Some intial ideas of what I'm hoping to build out in future iterations. Ideas welcome!
 
 Advanced Biometric Analysis
 - Creating fatigue metric to identify when subject is getting tired/overextended
 - Density estimation with Bayesian modeling
 
 Unsupervised Learning
-- Clustering accelerometer, gyrometer, and magnometer data to segment activities in high dimensional spaces
-- Dimensionality reduction to investigate loading vectors
+- Analysis write up of clustering results
+- Building biplot to analyze loaded vectors after dimensionality reduction
 
 Supervised Learning
 - Classification of activity/sport based on sensor readings
+- Potential classification objectives based on new metrics constructed
 
 Will be integrating this app with DAGSHub as well to build it optimal MLOps functionality.
