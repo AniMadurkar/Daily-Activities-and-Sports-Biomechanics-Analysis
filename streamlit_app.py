@@ -192,15 +192,15 @@ def main():
         st.write(
             """
         ##
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        This dataset contains eight subjects (4 males, 4 females, between the ages of 20 and 30) that performed 19 activities for 5 minutes at the Bilkent University Sports Hall, 
+        in the Electrical and Electronics Engineering Building and in a flat outdoor area on campus. The signal duration is 5 minutes for each activity for each subject. The subjects are asked to perform the activities 
+        in their own style and were not restricted on how the activities should be performed so we are likely to find quite a bit of variation for the activities for each subject. 
+        Sensor units are calibrated to acquire data at 25 Hz sampling frequency. The 5-min signals are divided into 5-sec segments so that 480(=60x8) signal segments are obtained for each activity.
+        The segments provided are: T - Torso, LA & RA - Left Arm & Right Arm, LL & RL - Left Leg & Right Leg.
+        The sensors used are: accelerometers, gyrometers, and magnometers in x, y, and z directions.
 
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        The Exploratory Data Analysis dashboard visually analyzes the data in a variety of ways including via time series, 3D scatterplot, distribution and correlation matrix, and boxplots. 
+        For the Machine Learning dashboard, I plan to add in more advanced analysis of metrics along with unsupervised and supervised learning objectives.
         """
         )
 
