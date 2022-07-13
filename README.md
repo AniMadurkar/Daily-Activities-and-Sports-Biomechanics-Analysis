@@ -40,9 +40,7 @@ Due to the volume of data files in the dataset, I don't include it here in the g
 
 2. Download the data_cleaning.py script in this repo
 
-3. Make sure the data cleaning scipt is at the same level as the data folder, like below:
--- /data
--- /data_cleaning.py
+3. Make sure the data cleaning scipt is at the same level as the data folder
 
 4. Change path variable where it says:
  ``` 
@@ -76,3 +74,5 @@ Unsupervised Learning
 
 Supervised Learning
 - Classification of activity/sport based on sensor readings
+
+Will be integrating this app with DAGSHub as well to build it optimal MLOps functionality.
