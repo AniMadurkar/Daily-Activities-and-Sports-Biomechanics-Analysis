@@ -67,6 +67,7 @@ Some intial ideas of what I'm hoping to build out in future versions. Ideas welc
 
 Advanced Biometric Analysis
 - Creating fatigue metric to identify when subject is getting tired/overextended
+- Density estimation with Bayesian modeling
 
 Unsupervised Learning
 - Clustering accelerometer, gyrometer, and magnometer data to segment activities in high dimensional spaces
