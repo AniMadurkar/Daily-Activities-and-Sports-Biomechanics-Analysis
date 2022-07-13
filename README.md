@@ -40,9 +40,11 @@ Due to the volume of data files in the dataset, I don't include it here in the g
 -- /data_cleaning.py
 
 4. Change path variable where it says:
+ ``` 
 # ENTER PATH HERE TO DOWNLOADED DATA FOLDER
 # Example: C:/Users/user1/Documents/Project Folder/data
 path = ''
+```
 
 5. Run this in the terminal:
  ``` cmd
