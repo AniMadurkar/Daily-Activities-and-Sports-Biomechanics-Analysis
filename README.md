@@ -1,11 +1,16 @@
 # Daily Activities and Sports Biomechanics Analysis
+
+THIS PROJECT IS STILL IN PROGRESS.
+
 As an avid sports fan and data/ML nerd, I love using my skills to analyze human performance for the purpose of physical therapy, performance enhancement, and activity optimization.
 
 Unfortunately there aren't that many datasets out there that capture robust sensor data for a wide range of activities. This passion project analyzes one of the few reputed sources I could find. The dataset utilized here is from the UCI Machine Learning Repository: [Daily and Sports Activities Data Set](https://archive.ics.uci.edu/ml/datasets/daily+and+sports+activities#)
 
 I venture to build a Streamlit dashboard that encompases relevant exploratory data analysis and machine learning for a variety of insights and objectives. I also plan to accompany a series on Medium to showcase what I built, found, and how others may join in on the fun.
 
-DISCLAIMER: THIS PROJECT IS STILL IN PROGRESS.
+Link to Streamlit dashboard: https://animadurkar-daily-activities-and-sports-bi-streamlit-app-akeaba.streamlitapp.com/
+
+DISCLAIMER: The streamlit dashboard that is deployed here is running only on 5% of the total dataset due to Github's large data file limitations. Follow the steps below to run the dashboard on the full dataset.
 
 ## Getting Started
 
