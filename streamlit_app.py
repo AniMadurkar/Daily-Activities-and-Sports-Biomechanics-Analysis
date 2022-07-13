@@ -29,8 +29,11 @@ def main():
             sports_science = outputted complete sports_science dataset 
         """
         
-        sports_science = pd.read_csv(filename)
-
+        try:
+            sports_science = pd.read_csv(filename)
+        except:
+            sports_science = pd.read_csv(f"{filename}_subset")
+                    
         return sports_science
 
     @st.cache()
