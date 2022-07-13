@@ -14,7 +14,8 @@ if __name__ == "__main__":
         for sensor in sensors_codes:
             data_columns.append(unit + '_' + sensor)
     
-    # ENTER PATH HERE
+    # ENTER PATH HERE TO DOWNLOADED DATA FOLDER
+    # Example: C:/Users/user1/Documents/Project Folder/data
     path = ''
 
     # Getting all folders with data files in directory
