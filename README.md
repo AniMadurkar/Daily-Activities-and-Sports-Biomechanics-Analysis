@@ -27,15 +27,7 @@ Before running the project, we have to install all the dependencies from require
 pip install -r requirements.txt
 ```
 
-### Hosting
-
-Last, change the path variable and get the project hosted on your local machine with a single command.
-
-``` cmd
-streamlit run streamlit_app.py
-```
-
-## Data Cleaning
+### Data Cleaning
 
 Due to the volume of data files in the dataset, I don't include it here in the github but here's how you can run my data cleaning script to combine and clean the data to work with one csv in your local machine:
 
@@ -48,11 +40,21 @@ Due to the volume of data files in the dataset, I don't include it here in the g
 -- /data_cleaning.py
 
 4. Change path variable where it says:
-
+# ENTER PATH HERE TO DOWNLOADED DATA FOLDER
+# Example: C:/Users/user1/Documents/Project Folder/data
+path = ''
 
 5. Run this in the terminal:
  ``` cmd
 python data_cleaning.py
+```
+
+### Hosting
+
+Last, get the project hosted on your local machine with a single command.
+
+``` cmd
+streamlit run streamlit_app.py
 ```
 
 ## Coming Soon...
