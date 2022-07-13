@@ -47,7 +47,10 @@ Due to the volume of data files in the dataset, I don't include it here in the g
 -- /data
 -- /data_cleaning.py
 
-4. Run this in the terminal:
+4. Change path variable where it says:
+
+
+5. Run this in the terminal:
  ``` cmd
 python data_cleaning.py
 ```
