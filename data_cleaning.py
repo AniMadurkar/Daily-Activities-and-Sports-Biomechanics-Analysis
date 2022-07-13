@@ -13,8 +13,9 @@ if __name__ == "__main__":
     for unit in units_codes:
         for sensor in sensors_codes:
             data_columns.append(unit + '_' + sensor)
-
-    path = 'C:/Users/anima/Documents/Sports Science/data'
+    
+    # ENTER PATH HERE
+    path = ''
 
     # Getting all folders with data files in directory
     activity_folders = [f for f in listdir(path) if not isfile(join(path, f))]
