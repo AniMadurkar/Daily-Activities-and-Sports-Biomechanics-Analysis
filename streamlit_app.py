@@ -195,7 +195,6 @@ def main():
         This dataset contains eight subjects (4 males, 4 females, between the ages of 20 and 30) that performed 19 activities for 5 minutes at the Bilkent University Sports Hall, 
         in the Electrical and Electronics Engineering Building and in a flat outdoor area on campus. The signal duration is 5 minutes for each activity for each subject. The subjects are asked to perform the activities 
         in their own style and were not restricted on how the activities should be performed so we are likely to find quite a bit of variation for the activities for each subject. 
-        Sensor units are calibrated to acquire data at 25 Hz sampling frequency. The 5-min signals are divided into 5-sec segments so that 480(=60x8) signal segments are obtained for each activity.
         The segments provided are: T - Torso, LA & RA - Left Arm & Right Arm, LL & RL - Left Leg & Right Leg.
         The sensors used are: accelerometers, gyrometers, and magnometers in x, y, and z directions.
 
