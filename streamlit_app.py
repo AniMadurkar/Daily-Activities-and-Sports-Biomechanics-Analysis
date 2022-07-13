@@ -1,5 +1,3 @@
-from tkinter import Y
-from matplotlib.axis import XAxis
 import pandas as pd
 import numpy as np
 import streamlit as st
