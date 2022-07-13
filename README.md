@@ -29,7 +29,7 @@ pip install -r requirements.txt
 
 ### Hosting
 
-Last, get the project hosted on your local machine with a single command.
+Last, change the path variable and get the project hosted on your local machine with a single command.
 
 ``` cmd
 streamlit run streamlit_app.py
