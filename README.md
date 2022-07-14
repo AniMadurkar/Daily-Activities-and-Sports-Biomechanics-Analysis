@@ -8,7 +8,8 @@ Unfortunately there aren't that many datasets out there that capture robust sens
 
 I venture to build a Streamlit dashboard that encompases relevant exploratory data analysis and machine learning for a variety of insights and objectives. I also plan to accompany a series on Medium to showcase what I built, found, and how others may join in on the fun.
 
-Link to Streamlit dashboard: https://animadurkar-daily-activities-and-sports-bi-streamlit-app-akeaba.streamlitapp.com/
+- Link to Streamlit dashboard: https://animadurkar-daily-activities-and-sports-bi-streamlit-app-akeaba.streamlitapp.com/
+- Link to DagsHub project to view modeling experiments: https://dagshub.com/AniMadurkar/sports-science
 
 DISCLAIMER: The streamlit dashboard that is deployed here is running only on 5% of the total dataset due to Github's large data file limitations. Follow the steps below to run the dashboard on the full dataset.
 
@@ -74,7 +75,8 @@ Unsupervised Learning
 - Building biplot to analyze loaded vectors after dimensionality reduction
 
 Supervised Learning
-- Classification of activity/sport based on sensor readings
+- Experiment with more classification models to predict activity for each subject
+- Model post prediction analysis write up (feature importances, ablation testing, etc.)
 - Potential classification objectives based on new metrics constructed
 
-Will be integrating this app with DAGSHub as well to build it optimal MLOps functionality.
+Will be integrating this app with DagsHub as well to build it optimal MLOps functionality.
