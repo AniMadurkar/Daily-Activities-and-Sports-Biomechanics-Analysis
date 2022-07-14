@@ -71,6 +71,7 @@ Advanced Biometric Analysis
 - Density estimation with Bayesian modeling
 
 Unsupervised Learning
+- Clustering of peaks to segment form and technique
 - Analysis write up of clustering results
 - Building biplot to analyze loaded vectors after dimensionality reduction
 
