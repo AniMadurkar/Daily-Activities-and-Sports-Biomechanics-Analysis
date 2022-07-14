@@ -79,4 +79,9 @@ Supervised Learning
 - Model post prediction analysis write up (feature importances, ablation testing, etc.)
 - Potential classification objectives based on new metrics constructed
 
+General
+- Document code more effectively
+- Tweak streamlit dashboard design to be more user friendly
+- Medium write up with analyses
+
 Will be integrating this app with DagsHub as well to build it optimal MLOps functionality.
