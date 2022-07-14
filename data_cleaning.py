@@ -13,10 +13,8 @@ if __name__ == "__main__":
     for unit in units_codes:
         for sensor in sensors_codes:
             data_columns.append(unit + '_' + sensor)
-    
-    # ENTER PATH HERE TO DOWNLOADED DATA FOLDER
-    # Example: C:/Users/user1/Documents/Project Folder/data
-    path = ''
+
+    path = 'C:/Users/anima/Documents/Daily Activities and Sports Biomechanics Analysis/data'
 
     # Getting all folders with data files in directory
     activity_folders = [f for f in listdir(path) if not isfile(join(path, f))]
@@ -45,11 +43,7 @@ if __name__ == "__main__":
             segments = {}
             for segment in segment_files:
                 print(f"Activity: {activity}, Subject: {subject}, Segment: {segment}...")
-                segment_data = pd.read_csv(f'{path}/{activity}/{subject}/{segment}', names=data_columns)
-                
-                # Calculating second values
-                # for col in segment_data.columns:
-                #     segment_data[f'{col}_sec'] = segment_data[col].rolling(25, min_periods=1).mean()
+                segment_data = pd.read_csv(f'{path}/{activity}/{subject}/{segment}', names=data_columns)            
 
                 segment_data['segment'] = segment[:-4]
                 segments[segment] = segment_data
