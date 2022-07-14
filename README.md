@@ -67,7 +67,7 @@ streamlit run streamlit_app.py
 
 [dashboard_main_page.webm](https://user-images.githubusercontent.com/49261829/179043527-63795c58-47c6-4610-b3c8-8fa52b7780cc.webm)
 
-[dashboard_filtering_analyzing.webm](https://user-images.githubusercontent.com/49261829/179044015-18f5b4bc-c9eb-4268-a943-db0ae98567f3.webm)
+[dashboard_filtering_analyzing.webm](https://user-images.githubusercontent.com/49261829/179053148-35970c68-6a94-4ef3-a2d6-842968a58aa7.webm)
 
 ## Coming Soon...
 Some intial ideas of what I'm hoping to build out in future iterations. Ideas welcome!
