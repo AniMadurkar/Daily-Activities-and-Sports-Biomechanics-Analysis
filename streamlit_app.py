@@ -96,7 +96,7 @@ def main():
 
         fig = px.scatter_3d(df, x=x, y=y, z=z, 
                             color=df.index, color_continuous_scale="Magma",
-                            width=1000, height=800)
+                            width=800, height=800)
 
         st.subheader(f"{sensor_selected} in 3D Space Over Time")
 
