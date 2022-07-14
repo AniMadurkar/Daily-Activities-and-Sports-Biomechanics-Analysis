@@ -154,7 +154,13 @@ def main():
     def motion_boxplots(df, filtered_sensor_code, filtered_sensor_label):
 
         fig, ax = plt.subplots(figsize=(30, 10))
-        ax = sns.boxplot(data=df, x="activity_name", y=filtered_sensor_code)
+
+        if len(filtered_sensor_code) > 1:            
+            df = df.drop(columns=["segment", "subject", "activity"]).set_index("activity_name").stack().reset_index().rename(columns={"level_1": "sensor", 0: "value"})
+            df = df[df["sensor"].isin(filtered_sensor_code)]
+            ax = sns.boxplot(data=df, x="activity_name", y="value", hue="sensor")
+        else:
+            ax = sns.boxplot(data=df, x="activity_name", y=filtered_sensor_code)
         
         ax.set_xticklabels(list(df.activity_name.unique()), rotation=90)
         ax.set(ylabel=filtered_sensor_label)
@@ -296,38 +302,38 @@ def main():
                 with row3_1:            
 
                     unit_code = "LA_"
-                    filtered_sensor_codes, filtered_sensor_labels = sensor_codes_and_labels(sensors_codes, sensors_labels, unit_code)
+                    left_filtered_sensor_codes, left_filtered_sensor_labels = sensor_codes_and_labels(sensors_codes, sensors_labels, unit_code)
                     
-                    filtered_data_left = filtered_subject_and_activity[filtered_sensor_codes+["segment"]]
+                    filtered_data_left = filtered_subject_and_activity[left_filtered_sensor_codes+["segment"]]
 
-                    sensor_linechart(filtered_data_left, filtered_sensor_codes, filtered_sensor_labels, unit_code)
+                    sensor_linechart(filtered_data_left, left_filtered_sensor_codes, left_filtered_sensor_labels, unit_code)
                     st.write("")
                     st.write("")                    
-                    sensor_3dplot(filtered_data_left, filtered_sensor_codes)
+                    sensor_3dplot(filtered_data_left, left_filtered_sensor_codes)
                     st.write("")
                     st.write("")
-                    sensor_distribution(filtered_data_left, filtered_sensor_codes, filtered_sensor_labels, unit_code)
+                    sensor_distribution(filtered_data_left, left_filtered_sensor_codes, left_filtered_sensor_labels, unit_code)
                     st.write("")
                     st.write("")
-                    sensor_pearson_correlation(filtered_subject_and_activity, filtered_sensor_codes, unit_code)
+                    sensor_pearson_correlation(filtered_subject_and_activity, left_filtered_sensor_codes, unit_code)
 
                 with row3_2:        
 
                     unit_code = "RA_"
-                    filtered_sensor_codes, filtered_sensor_labels = sensor_codes_and_labels(sensors_codes, sensors_labels, unit_code)
+                    right_filtered_sensor_codes, right_filtered_sensor_labels = sensor_codes_and_labels(sensors_codes, sensors_labels, unit_code)
 
-                    filtered_data_right = filtered_subject_and_activity[filtered_sensor_codes+["segment"]]
+                    filtered_data_right = filtered_subject_and_activity[right_filtered_sensor_codes+["segment"]]
 
-                    sensor_linechart(filtered_data_right, filtered_sensor_codes, filtered_sensor_labels, unit_code)
+                    sensor_linechart(filtered_data_right, right_filtered_sensor_codes, right_filtered_sensor_labels, unit_code)
                     st.write("")
                     st.write("")                    
                     sensor_3dplot(filtered_data_right, filtered_data_right)
                     st.write("")
                     st.write("")                    
-                    sensor_distribution(filtered_data_right, filtered_sensor_codes, filtered_sensor_labels, unit_code)
+                    sensor_distribution(filtered_data_right, right_filtered_sensor_codes, right_filtered_sensor_labels, unit_code)
                     st.write("")
                     st.write("")                    
-                    sensor_pearson_correlation(filtered_subject_and_activity, filtered_sensor_codes, unit_code)
+                    sensor_pearson_correlation(filtered_subject_and_activity, right_filtered_sensor_codes, unit_code)
                 
                 row3_3, row3_4 = st.columns((2.5, 2.5))
 
@@ -348,47 +354,47 @@ def main():
                     )            
 
                 filtered_subject_multi_activities = data[(data["subject"]==person_selected) & (data["activity_name"].isin(activity_multi))]
-
-                filtered_sensor_code = [x for x in filtered_sensor_codes if sensor_selected2[0].lower() in x][0]
-
+                filtered_sensor_codes = left_filtered_sensor_codes + right_filtered_sensor_codes
+                filtered_sensor_code = [x for x in filtered_sensor_codes if sensor_selected2[0].lower() in x]
+                
                 motion_boxplots(filtered_subject_multi_activities, filtered_sensor_code, sensor_selected2)
 
             elif unit_selected == "Legs":
                 with row3_1:            
 
                     unit_code = "LL_"
-                    filtered_sensor_codes, filtered_sensor_labels = sensor_codes_and_labels(sensors_codes, sensors_labels, unit_code)
+                    left_filtered_sensor_codes, left_filtered_sensor_labels = sensor_codes_and_labels(sensors_codes, sensors_labels, unit_code)
 
-                    filtered_data_left = filtered_subject_and_activity[filtered_sensor_codes+["segment"]]  
+                    filtered_data_left = filtered_subject_and_activity[left_filtered_sensor_codes+["segment"]]  
 
-                    sensor_linechart(filtered_data_left, filtered_sensor_codes, filtered_sensor_labels, unit_code)
+                    sensor_linechart(filtered_data_left, left_filtered_sensor_codes, left_filtered_sensor_labels, unit_code)
                     st.write("")
                     st.write("")                    
-                    sensor_3dplot(filtered_data_left, filtered_sensor_codes)
+                    sensor_3dplot(filtered_data_left, left_filtered_sensor_codes)
                     st.write("")
                     st.write("")                    
-                    sensor_distribution(filtered_data_left, filtered_sensor_codes, filtered_sensor_labels, unit_code)
+                    sensor_distribution(filtered_data_left, left_filtered_sensor_codes, left_filtered_sensor_labels, unit_code)
                     st.write("")
                     st.write("")                    
-                    sensor_pearson_correlation(filtered_subject_and_activity, filtered_sensor_codes, unit_code)
+                    sensor_pearson_correlation(filtered_subject_and_activity, left_filtered_sensor_codes, unit_code)
 
                 with row3_2:            
 
                     unit_code = "RL_"
-                    filtered_sensor_codes, filtered_sensor_labels = sensor_codes_and_labels(sensors_codes, sensors_labels, unit_code)
+                    right_filtered_sensor_codes, right_filtered_sensor_labels = sensor_codes_and_labels(sensors_codes, sensors_labels, unit_code)
 
-                    filtered_data_right = filtered_subject_and_activity[filtered_sensor_codes+["segment"]]       
+                    filtered_data_right = filtered_subject_and_activity[right_filtered_sensor_codes+["segment"]]       
 
-                    sensor_linechart(filtered_data_right, filtered_sensor_codes, filtered_sensor_labels, unit_code)
+                    sensor_linechart(filtered_data_right, right_filtered_sensor_codes, right_filtered_sensor_labels, unit_code)
                     st.write("")
                     st.write("")                    
                     sensor_3dplot(filtered_data_right, filtered_data_right)
                     st.write("")
                     st.write("")                    
-                    sensor_distribution(filtered_data_right, filtered_sensor_codes, filtered_sensor_labels, unit_code)
+                    sensor_distribution(filtered_data_right, right_filtered_sensor_codes, right_filtered_sensor_labels, unit_code)
                     st.write("")
                     st.write("")                    
-                    sensor_pearson_correlation(filtered_subject_and_activity, filtered_sensor_codes, unit_code)
+                    sensor_pearson_correlation(filtered_subject_and_activity, right_filtered_sensor_codes, unit_code)
 
                 row3_3, row3_4 = st.columns((2.5, 2.5))
 
@@ -409,8 +415,8 @@ def main():
                     )            
 
                 filtered_subject_multi_activities = data[(data["subject"]==person_selected) & (data["activity_name"].isin(activity_multi))]
-
-                filtered_sensor_code = [x for x in filtered_sensor_codes if sensor_selected2[0].lower() in x][0]
+                filtered_sensor_codes = left_filtered_sensor_codes + right_filtered_sensor_codes
+                filtered_sensor_code = [x for x in filtered_sensor_codes if sensor_selected2[0].lower() in x]
 
                 motion_boxplots(filtered_subject_multi_activities, filtered_sensor_code, sensor_selected2)            
 
