@@ -84,4 +84,4 @@ General
 - Tweak streamlit dashboard design to be more user friendly
 - Medium write up with analyses
 
-Will be integrating this app with DagsHub as well to build it optimal MLOps functionality.
+Will be integrating this app with DagsHub as well to build in MLOps functionality.
