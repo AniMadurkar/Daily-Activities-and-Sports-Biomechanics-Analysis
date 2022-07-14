@@ -63,6 +63,12 @@ Last, get the project hosted on your local machine with a single command.
 streamlit run streamlit_app.py
 ```
 
+## Streamlit Dashboard Demos
+
+[dashboard_main_page.webm](https://user-images.githubusercontent.com/49261829/179043527-63795c58-47c6-4610-b3c8-8fa52b7780cc.webm)
+
+[dashboard_filtering_analyzing.webm](https://user-images.githubusercontent.com/49261829/179044015-18f5b4bc-c9eb-4268-a943-db0ae98567f3.webm)
+
 ## Coming Soon...
 Some intial ideas of what I'm hoping to build out in future iterations. Ideas welcome!
 
