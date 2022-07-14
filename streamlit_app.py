@@ -328,6 +328,30 @@ def main():
                     st.write("")
                     st.write("")                    
                     sensor_pearson_correlation(filtered_subject_and_activity, filtered_sensor_codes, unit_code)
+                
+                row3_3, row3_4 = st.columns((2.5, 2.5))
+
+                with row3_3:
+                    activity_multi = st.multiselect(
+                        "Select what kinds of activities to measure together:",
+                        list(data.activity_name.unique()),
+                        default=list(data.activity_name.unique()),
+                        key="activities"
+                    )
+
+                with row3_4:
+                    sensor_selected2 = st.selectbox(
+                        f"Select type of {sensor_selected} to analyze activities by:",
+                        (f"X {sensor_selected}", f"Y {sensor_selected}", f"Z {sensor_selected}"),
+                        index=0,
+                        key="sensor_selected2"
+                    )            
+
+                filtered_subject_multi_activities = data[(data["subject"]==person_selected) & (data["activity_name"].isin(activity_multi))]
+
+                filtered_sensor_code = [x for x in filtered_sensor_codes if sensor_selected2[0].lower() in x][0]
+
+                motion_boxplots(filtered_subject_multi_activities, filtered_sensor_code, sensor_selected2)
 
             elif unit_selected == "Legs":
                 with row3_1:            
@@ -365,6 +389,30 @@ def main():
                     st.write("")
                     st.write("")                    
                     sensor_pearson_correlation(filtered_subject_and_activity, filtered_sensor_codes, unit_code)
+
+                row3_3, row3_4 = st.columns((2.5, 2.5))
+
+                with row3_3:
+                    activity_multi = st.multiselect(
+                        "Select what kinds of activities to measure together:",
+                        list(data.activity_name.unique()),
+                        default=list(data.activity_name.unique()),
+                        key="activities"
+                    )
+
+                with row3_4:
+                    sensor_selected2 = st.selectbox(
+                        f"Select type of {sensor_selected} to analyze activities by:",
+                        (f"X {sensor_selected}", f"Y {sensor_selected}", f"Z {sensor_selected}"),
+                        index=0,
+                        key="sensor_selected2"
+                    )            
+
+                filtered_subject_multi_activities = data[(data["subject"]==person_selected) & (data["activity_name"].isin(activity_multi))]
+
+                filtered_sensor_code = [x for x in filtered_sensor_codes if sensor_selected2[0].lower() in x][0]
+
+                motion_boxplots(filtered_subject_multi_activities, filtered_sensor_code, sensor_selected2)            
 
     elif dashboard_type == 'Machine Learning':
         st.write("In Progress...")
