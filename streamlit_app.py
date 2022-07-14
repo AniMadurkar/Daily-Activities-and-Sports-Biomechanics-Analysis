@@ -194,12 +194,12 @@ def main():
         ##
         This dataset contains eight subjects (4 males, 4 females, between the ages of 20 and 30) that performed 19 activities for 5 minutes at the Bilkent University Sports Hall, 
         in the Electrical and Electronics Engineering Building and in a flat outdoor area on campus. The signal duration is 5 minutes for each activity for each subject. The subjects are asked to perform the activities 
-        in their own style and were not restricted on how the activities should be performed so we are likely to find quite a bit of variation for the activities for each subject. 
+        in their own style and were not restricted on how the activities should be performed so we are likely to find quite a bit of variation for the activities for each subject.         
         The segments provided are: T - Torso, LA & RA - Left Arm & Right Arm, LL & RL - Left Leg & Right Leg.
         The sensors used are: accelerometers, gyrometers, and magnometers in x, y, and z directions.
 
-        The Exploratory Data Analysis dashboard visually analyzes the data in a variety of ways including via time series, 3D scatterplot, distribution and correlation matrix, and boxplots. 
-        For the Machine Learning dashboard, I plan to add in more advanced analysis of metrics along with unsupervised and supervised learning objectives.
+        Disclaimer: The streamlit dashboard that is deployed here is running only on 5% of the total dataset due to Github's large data file limitations. 
+        Follow the steps in the Github readme to run the dashboard on the full dataset.
         """
         )
 
