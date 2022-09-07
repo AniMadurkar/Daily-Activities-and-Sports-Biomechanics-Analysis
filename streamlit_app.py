@@ -188,7 +188,7 @@ def main():
         )
         dashboard_type = st.radio(
             "Select a desired dashboard type:",
-            ("Exploratory Data Analysis", "Machine Learning"),
+            ("Exploratory Data Analysis"),
             index=0,
             key="dashboard"
         )
@@ -420,8 +420,8 @@ def main():
 
                 motion_boxplots(filtered_subject_multi_activities, filtered_sensor_code, sensor_selected2)            
 
-    elif dashboard_type == 'Machine Learning':
-        st.write("In Progress...")
+    # elif dashboard_type == 'Machine Learning':
+    #     st.write("In Progress...")
 
 if __name__ == '__main__':
     main()
